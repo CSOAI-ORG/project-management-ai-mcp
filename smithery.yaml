@@ -1,0 +1,10 @@
+name: project-management-ai-mcp
+description: "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/project-management-ai-mcp
+license: MIT
+categories: [Project Management, Productivity]
+tags: [project-management, task-tracking, agile, kanban, sprint-planning]
+runtime: python
+entrypoint: server.py

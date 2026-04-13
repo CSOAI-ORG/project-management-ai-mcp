@@ -5,23 +5,18 @@ build-backend = "hatchling.build"
 [project]
 name = "project-management-ai-mcp"
 version = "1.0.0"
-description = "MCP server for project management - task decomposition, sprint planning, risk assessment, timelines, standups"
+description = "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
+authors = [{name="MEOK AI Labs", email="nicholas@meok.ai"}]
 readme = "README.md"
-license = "MIT"
+license = {text = "MIT"}
 requires-python = ">=3.10"
-authors = [
-    { name = "MEOK AI Labs", email = "hello@meok.ai" },
-]
-keywords = ["mcp", "project-management", "agile", "sprint", "risk", "timeline", "standup"]
+keywords = ["mcp", "mcp-server", "model-context-protocol", "claude", "ai-tools", "meok-ai-labs", "project-management", "task-tracking", "agile", "kanban", "sprint-planning"]
 classifiers = [
     "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
 ]
 dependencies = [
     "mcp>=1.0.0",
@@ -29,12 +24,6 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://meok.ai"
-Repository = "https://github.com/meok-ai/project-management-ai-mcp"
-Documentation = "https://meok.ai/docs"
-Issues = "https://github.com/meok-ai/project-management-ai-mcp/issues"
-
-[project.scripts]
-project-management-ai-mcp = "server:mcp.run"
-
-[tool.hatch.build.targets.wheel]
-packages = ["."]
+Repository = "https://github.com/CSOAI-ORG/project-management-ai-mcp"
+Documentation = "https://meok.ai/docs/project-management-ai-mcp"
+"Bug Tracker" = "https://github.com/CSOAI-ORG/project-management-ai-mcp/issues"
