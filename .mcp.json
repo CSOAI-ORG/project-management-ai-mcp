@@ -1,24 +1,158 @@
 {
   "name": "project-management-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://meok.ai",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/project-management-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**PM Intelligence**",
+  "version": "1.0.0",
   "tools": [
-    "decompose_task",
-    "plan_sprint",
-    "assess_risks",
-    "estimate_timeline",
-    "generate_standup"
-  ],
-  "categories": [
-    "Project Management",
-    "Productivity"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "decompose_task",
+      "description": "Break down a task into actionable subtasks with effort estimates.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "task_type": {
+            "type": "string"
+          },
+          "complexity": {
+            "type": "string"
+          },
+          "include_estimates": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      }
+    },
+    {
+      "name": "plan_sprint",
+      "description": "Plan a sprint by allocating tasks to capacity.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "tasks": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "sprint_days": {
+            "type": "integer"
+          },
+          "team_size": {
+            "type": "integer"
+          },
+          "velocity": {
+            "type": "integer",
+            "nullable": true
+          },
+          "sprint_name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "tasks"
+        ]
+      }
+    },
+    {
+      "name": "assess_risks",
+      "description": "Assess project risks and generate mitigation strategies.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "project_name": {
+            "type": "string"
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "project_budget": {
+            "type": "number",
+            "nullable": true
+          },
+          "deadline": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "project_name",
+          "risks"
+        ]
+      }
+    },
+    {
+      "name": "estimate_timeline",
+      "description": "Estimate project timeline from task list with dependency awareness.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "tasks": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "team_size": {
+            "type": "integer"
+          },
+          "hours_per_day": {
+            "type": "number"
+          },
+          "buffer_pct": {
+            "type": "number"
+          },
+          "start_date": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "tasks"
+        ]
+      }
+    },
+    {
+      "name": "generate_standup",
+      "description": "Generate a formatted standup report from team updates.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "team_updates": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "sprint_day": {
+            "type": "integer"
+          },
+          "sprint_total_days": {
+            "type": "integer"
+          },
+          "blockers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "required": [
+          "team_updates"
+        ]
+      }
+    }
+  ]
 }

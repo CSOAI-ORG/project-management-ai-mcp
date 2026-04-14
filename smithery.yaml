@@ -1,10 +1,88 @@
 name: project-management-ai-mcp
-description: "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/project-management-ai-mcp
-license: MIT
-categories: [Project Management, Productivity]
-tags: [project-management, task-tracking, agile, kanban, sprint-planning]
-runtime: python
-entrypoint: server.py
+description: '**PM Intelligence**'
+version: 1.0.0
+tools:
+- name: decompose_task
+  description: Break down a task into actionable subtasks with effort estimates.
+  parameters:
+  - name: title
+    type: string
+    required: true
+  - name: description
+    type: string
+    required: false
+  - name: task_type
+    type: string
+    required: false
+  - name: complexity
+    type: string
+    required: false
+  - name: include_estimates
+    type: boolean
+    required: false
+- name: plan_sprint
+  description: Plan a sprint by allocating tasks to capacity.
+  parameters:
+  - name: tasks
+    type: array
+    required: true
+  - name: sprint_days
+    type: integer
+    required: false
+  - name: team_size
+    type: integer
+    required: false
+  - name: velocity
+    type: integer
+    required: false
+  - name: sprint_name
+    type: string
+    required: false
+- name: assess_risks
+  description: Assess project risks and generate mitigation strategies.
+  parameters:
+  - name: project_name
+    type: string
+    required: true
+  - name: risks
+    type: array
+    required: true
+  - name: project_budget
+    type: number
+    required: false
+  - name: deadline
+    type: string
+    required: false
+- name: estimate_timeline
+  description: Estimate project timeline from task list with dependency awareness.
+  parameters:
+  - name: tasks
+    type: array
+    required: true
+  - name: team_size
+    type: integer
+    required: false
+  - name: hours_per_day
+    type: number
+    required: false
+  - name: buffer_pct
+    type: number
+    required: false
+  - name: start_date
+    type: string
+    required: false
+- name: generate_standup
+  description: Generate a formatted standup report from team updates.
+  parameters:
+  - name: team_updates
+    type: array
+    required: true
+  - name: sprint_day
+    type: integer
+    required: false
+  - name: sprint_total_days
+    type: integer
+    required: false
+  - name: blockers
+    type: array
+    required: false

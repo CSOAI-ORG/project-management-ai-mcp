@@ -6,6 +6,11 @@ Task decomposition, sprint planning, risk assessment,
 timeline estimation, and standup report generation.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 import math
 from datetime import datetime, timezone, timedelta
@@ -86,7 +91,7 @@ def decompose_task(
     description: str = "",
     task_type: str = "frontend_feature",
     complexity: str = "moderate",
-    include_estimates: bool = True) -> dict:
+    include_estimates: bool = True, api_key: str = "") -> dict:
     """Break down a task into actionable subtasks with effort estimates.
 
     Args:
@@ -96,6 +101,10 @@ def decompose_task(
         complexity: trivial | simple | moderate | complex | very_complex.
         include_estimates: Whether to include hour estimates.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -138,7 +147,7 @@ def plan_sprint(
     sprint_days: int = 10,
     team_size: int = 5,
     velocity: Optional[int] = None,
-    sprint_name: Optional[str] = None) -> dict:
+    sprint_name: Optional[str] = None, api_key: str = "") -> dict:
     """Plan a sprint by allocating tasks to capacity.
 
     Args:
@@ -148,6 +157,10 @@ def plan_sprint(
         velocity: Historical velocity in story points. If omitted, estimates from team size.
         sprint_name: Sprint name/number.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -206,7 +219,7 @@ def assess_risks(
     project_name: str,
     risks: list[dict],
     project_budget: Optional[float] = None,
-    deadline: Optional[str] = None) -> dict:
+    deadline: Optional[str] = None, api_key: str = "") -> dict:
     """Assess project risks and generate mitigation strategies.
 
     Args:
@@ -216,6 +229,10 @@ def assess_risks(
         project_budget: Total project budget for financial impact estimation.
         deadline: Project deadline in YYYY-MM-DD format.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -288,7 +305,7 @@ def estimate_timeline(
     team_size: int = 5,
     hours_per_day: float = 6.0,
     buffer_pct: float = 20.0,
-    start_date: Optional[str] = None) -> dict:
+    start_date: Optional[str] = None, api_key: str = "") -> dict:
     """Estimate project timeline from task list with dependency awareness.
 
     Args:
@@ -298,6 +315,10 @@ def estimate_timeline(
         buffer_pct: Risk buffer percentage to add.
         start_date: Start date in YYYY-MM-DD format.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -372,7 +393,7 @@ def generate_standup(
     team_updates: list[dict],
     sprint_day: int = 1,
     sprint_total_days: int = 10,
-    blockers: Optional[list[str]] = None) -> dict:
+    blockers: Optional[list[str]] = None, api_key: str = "") -> dict:
     """Generate a formatted standup report from team updates.
 
     Args:
@@ -381,6 +402,10 @@ def generate_standup(
         sprint_total_days: Total sprint days.
         blockers: Team-level blockers.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
