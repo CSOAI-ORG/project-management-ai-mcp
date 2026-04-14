@@ -14,10 +14,7 @@ from typing import Optional
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
-    "project-management-ai",
-    version="1.0.0",
-    description="PM AI - task decomposition, sprint planning, risk assessment, timelines, standups",
-)
+    "project-management-ai")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
@@ -89,8 +86,7 @@ def decompose_task(
     description: str = "",
     task_type: str = "frontend_feature",
     complexity: str = "moderate",
-    include_estimates: bool = True,
-) -> dict:
+    include_estimates: bool = True) -> dict:
     """Break down a task into actionable subtasks with effort estimates.
 
     Args:
@@ -142,8 +138,7 @@ def plan_sprint(
     sprint_days: int = 10,
     team_size: int = 5,
     velocity: Optional[int] = None,
-    sprint_name: Optional[str] = None,
-) -> dict:
+    sprint_name: Optional[str] = None) -> dict:
     """Plan a sprint by allocating tasks to capacity.
 
     Args:
@@ -211,8 +206,7 @@ def assess_risks(
     project_name: str,
     risks: list[dict],
     project_budget: Optional[float] = None,
-    deadline: Optional[str] = None,
-) -> dict:
+    deadline: Optional[str] = None) -> dict:
     """Assess project risks and generate mitigation strategies.
 
     Args:
@@ -294,8 +288,7 @@ def estimate_timeline(
     team_size: int = 5,
     hours_per_day: float = 6.0,
     buffer_pct: float = 20.0,
-    start_date: Optional[str] = None,
-) -> dict:
+    start_date: Optional[str] = None) -> dict:
     """Estimate project timeline from task list with dependency awareness.
 
     Args:
@@ -379,8 +372,7 @@ def generate_standup(
     team_updates: list[dict],
     sprint_day: int = 1,
     sprint_total_days: int = 10,
-    blockers: Optional[list[str]] = None,
-) -> dict:
+    blockers: Optional[list[str]] = None) -> dict:
     """Generate a formatted standup report from team updates.
 
     Args:
