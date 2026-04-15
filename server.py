@@ -18,8 +18,7 @@ from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP(
-    "project-management-ai")
+mcp = FastMCP("project-management-ai", instructions="")
 
 # ---------------------------------------------------------------------------
 # Rate limiting

@@ -1,5 +1,5 @@
 name: project-management-ai-mcp
-description: '**PM Intelligence**'
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: decompose_task

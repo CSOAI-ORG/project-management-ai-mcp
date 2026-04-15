@@ -1,6 +1,6 @@
 {
   "name": "project-management-ai-mcp",
-  "description": "**PM Intelligence**",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
   "version": "1.0.0",
   "tools": [
     {
@@ -37,10 +37,7 @@
         "type": "object",
         "properties": {
           "tasks": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "sprint_days": {
             "type": "integer"
@@ -49,12 +46,10 @@
             "type": "integer"
           },
           "velocity": {
-            "type": "integer",
-            "nullable": true
+            "type": "integer"
           },
           "sprint_name": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
         },
         "required": [
@@ -72,18 +67,13 @@
             "type": "string"
           },
           "risks": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "project_budget": {
-            "type": "number",
-            "nullable": true
+            "type": "number"
           },
           "deadline": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
         },
         "required": [
@@ -99,10 +89,7 @@
         "type": "object",
         "properties": {
           "tasks": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "team_size": {
             "type": "integer"
@@ -114,8 +101,7 @@
             "type": "number"
           },
           "start_date": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
         },
         "required": [
@@ -130,10 +116,7 @@
         "type": "object",
         "properties": {
           "team_updates": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "sprint_day": {
             "type": "integer"
@@ -142,11 +125,7 @@
             "type": "integer"
           },
           "blockers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
+            "type": "array"
           }
         },
         "required": [
