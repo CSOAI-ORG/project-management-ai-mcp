@@ -1,5 +1,6 @@
 name: project-management-ai-mcp
-description: "\x01"
+description: 'Project Management Ai MCP server. Tools: decompose task, plan sprint,
+  assess risks. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: decompose_task
