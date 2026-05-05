@@ -1,60 +1,38 @@
-# Project Management AI MCP Server
+<div align="center">
 
-**PM Intelligence**
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/project-management-ai-mcp)](https://github.com/CSOAI-ORG/project-management-ai-mcp/stargazers)
 
-Built by [MEOK AI Labs](https://meok.ai)
+# uprojectU managementU aiU mcp
+
+****PM Intelligence****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/project-management-ai-mcp)](https://www.npmjs.com/package/@meok-ai/project-management-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/project-management-ai-mcp/issues)
+
+</div>
 
 ---
 
-An MCP server for project managers and agile teams. Decompose tasks with effort estimates, plan sprints against team velocity, assess project risks with STRIDE-style analysis, estimate timelines with buffer calculations, and generate formatted standup reports.
-
-## Tools
-
-| Tool | Description |
-|------|-------------|
-| `decompose_task` | Break down tasks into subtasks with hour estimates and story points |
-| `plan_sprint` | Plan sprints by allocating tasks to team capacity with overflow handling |
-| `assess_risks` | Risk assessment with severity scoring and mitigation strategies |
-| `estimate_timeline` | Timeline estimation with critical path and milestone planning |
-| `generate_standup` | Generate formatted standup reports from team updates |
-
-## Quick Start
+## Installation
 
 ```bash
 pip install project-management-ai-mcp
+# or
+npm install -g @meok-ai/project-management-ai-mcp
 ```
 
-### Claude Desktop
+## Quick Start
 
-```json
-{
-  "mcpServers": {
-    "project-management-ai": {
-      "command": "python",
-      "args": ["-m", "server"],
-      "cwd": "/path/to/project-management-ai-mcp"
-    }
-  }
-}
-```
+See the project repository for full documentation and examples.
 
-### Direct Usage
+## Enterprise Support
 
-```bash
-python server.py
-```
-
-## Rate Limits
-
-| Tier | Requests/Hour |
-|------|--------------|
-| Free | 60 |
-| Pro | 5,000 |
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT - see [LICENSE](LICENSE)
-
----
-
-*Part of the MEOK AI Labs MCP Marketplace*
+MIT © [CSOAI](https://csoai.org)
