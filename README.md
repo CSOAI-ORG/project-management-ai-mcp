@@ -1,45 +1,63 @@
-[![project-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/project-management-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/project-management-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/project-management-ai-mcp)](https://pypi.org/project/project-management-ai-mcp/)
-
-[![project-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/project-management-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/project-management-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/project-management-ai-mcp)](https://github.com/CSOAI-ORG/project-management-ai-mcp/stargazers)
+# Project Management Ai MCP
 
-# uprojectU managementU aiU mcp
+**Project Management AI MCP Server - PM Intelligence**
 
-****PM Intelligence****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/project-management-ai-mcp)](https://www.npmjs.com/package/@meok-ai/project-management-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-project-management-ai-mcp)](https://pypi.org/project/meok-project-management-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/project-management-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Project Management AI MCP Server - PM Intelligence
+Built by MEOK AI Labs | https://meok.ai
+
+Task decomposition, sprint planning, risk assessment,
+timeline estimation, and standup report generation.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `decompose_task` | Break down a task into actionable subtasks with effort estimates. |
+| `plan_sprint` | Plan a sprint by allocating tasks to capacity. |
+| `assess_risks` | Assess project risks and generate mitigation strategies. |
+| `estimate_timeline` | Estimate project timeline from task list with dependency awareness. |
+| `generate_standup` | Generate a formatted standup report from team updates. |
 
 ## Installation
 
 ```bash
-pip install project-management-ai-mcp
-# or
-npm install -g @meok-ai/project-management-ai-mcp
+pip install meok-project-management-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "project-management-ai": {
+      "command": "python",
+      "args": ["-m", "meok_project_management_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 5 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/project-management-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
