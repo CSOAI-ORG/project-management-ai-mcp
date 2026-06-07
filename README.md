@@ -1,3 +1,4 @@
+<!-- mcp-name: CSOAI-ORG/project-management-ai-mcp -->
 # Project Management Ai MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
