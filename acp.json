@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "project-management-ai-mcp",
+    "description": "Project Management Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.7",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "project-management-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "decompose_task",
+      "plan_sprint",
+      "assess_risks",
+      "estimate_timeline",
+      "generate_standup"
+    ]
+  }
+}

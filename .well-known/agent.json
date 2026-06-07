@@ -1,0 +1,68 @@
+{
+  "name": "project-management-ai-mcp",
+  "description": "Project Management Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/project-management-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "decompose_task",
+      "name": "Decompose Task",
+      "description": "decompose_task via project-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "plan_sprint",
+      "name": "Plan Sprint",
+      "description": "plan_sprint via project-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "assess_risks",
+      "name": "Assess Risks",
+      "description": "assess_risks via project-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "estimate_timeline",
+      "name": "Estimate Timeline",
+      "description": "estimate_timeline via project-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_standup",
+      "name": "Generate Standup",
+      "description": "generate_standup via project-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
