@@ -1,0 +1,28 @@
+{
+  "name": "project-management-ai-mcp",
+  "title": "Project Management Ai Mcp",
+  "description": "Project Management Ai MCP server. Tools: decompose task, plan sprint, assess risks. Built by MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "decompose_task"
+    },
+    {
+      "name": "plan_sprint"
+    },
+    {
+      "name": "assess_risks"
+    },
+    {
+      "name": "estimate_timeline"
+    },
+    {
+      "name": "generate_standup"
+    }
+  ]
+}

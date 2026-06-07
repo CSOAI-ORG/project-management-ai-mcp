@@ -1,0 +1,9 @@
+# project-management-ai-mcp - Auto-trigger Rules
+
+When the user asks about project management, use project-management-ai-mcp tools: decompose_task, plan_sprint, assess_risks, estimate_timeline, generate_standup
+
+**Project Management AI MCP Server - PM Intelligence**
+
+Install: `pip install project-management-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
