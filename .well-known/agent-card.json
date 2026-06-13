@@ -1,0 +1,117 @@
+{
+  "name": "Project Management Ai Mcp",
+  "version": "1.0.7",
+  "url": "https://mcp.meok.ai/project-management-ai-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Project Management Ai MCP server. Tools: decompose task, plan sprint, assess risks. Built by MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "decompose_task",
+      "name": "Decompose Task",
+      "description": "Decompose Task — a tool of the project-management-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "plan_sprint",
+      "name": "Plan Sprint",
+      "description": "Plan Sprint — a tool of the project-management-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "assess_risks",
+      "name": "Assess Risks",
+      "description": "Assess Risks — a tool of the project-management-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "estimate_timeline",
+      "name": "Estimate Timeline",
+      "description": "Estimate Timeline — a tool of the project-management-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "generate_standup",
+      "name": "Generate Standup",
+      "description": "Generate Standup — a tool of the project-management-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "project-management-ai-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
