@@ -1,4 +1,6 @@
 """
+Buy Pro: https://www.csoai.org/checkout
+
 Project Management AI MCP Server - PM Intelligence
 Built by MEOK AI Labs | https://meok.ai
 
